@@ -10,6 +10,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  @apply text-white bg-[var(--color-dark)];
+}
+
 .section-pd {
-  @apply px-12;
+  @apply px-32;
 }

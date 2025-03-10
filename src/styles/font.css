@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Varela&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import "tailwindcss";
+
+body {
+  @apply font-[Poppins];
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-[Syne];
+}
+
+h1 {
+  @apply text-6xl sm:text-7xl md:text-8xl xl:text-9xl  bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center font-medium leading-tight text-transparent;
+}
+
+h3 {
+  @apply text-2xl lg:text-3xl;
+}
+
+.body-font {
+  @apply text-2xl;
+}
+
+.large-font {
+  @apply text-2xl xl:text-3xl;
+}
+
+.small-font {
+  @apply text-lg lg:text-xl;
+}

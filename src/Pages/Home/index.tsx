@@ -1,9 +1,7 @@
 import React from "react";
 import { Hero } from "../../ui";
 
-type Props = {};
-
-const HomePage = (props: Props) => {
+const HomePage = () => {
   return <Hero />;
 };
 

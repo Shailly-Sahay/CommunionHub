@@ -1,0 +1,32 @@
+:root {
+  --color-primary: #6919ff;
+  --color-secondary: #da77f2;
+
+  /* 2. Shades and Tints */
+  --primary-light-1: #8747ff;
+  --secondary-light-2: #e5a3e1;
+
+  --primary-dark-1: #5414cc;
+  --primary-dark-2: #3f0f99;
+
+  /* 3. Black & White */
+  --color-white: #fff;
+  --color-text-dark: #333;
+  --color-off-white: #faf9f6;
+  --color-dark: #020617;
+
+  /* 4. Gradients */
+  --color-gradient-1: linear-gradient(
+    to right bottom,
+    var(--color-primary),
+    #9775fa
+  );
+
+  /* 5. Text Colors */
+  --color-grey-light-1: #f9f5f3; /* Light background */
+  --color-grey-light-2: #f2efee; /* Light lines */
+  --color-grey-light-3: #96a1c0; /* Light text */
+
+  --color-grey-dark-1: #615551; /* Normal text */
+  --color-grey-dark-2: #918581; /* Lighter text */
+}
