@@ -4,7 +4,7 @@ import { GlowingButton } from "../../";
 import HighlightCard from "../../components/HighlightCard";
 
 interface EventFormData {
-  name: string;
+  speaker: string;
   email: string;
   title: string;
   category: string;
@@ -42,7 +42,7 @@ const Form: React.FC = () => {
     const existingEvents = JSON.parse(localStorage.getItem("events") || "[]");
     const eventWithImage = {
       ...data,
-      image: imagePreview || "",
+      img: imagePreview || "",
     };
     localStorage.setItem(
       "events",
@@ -66,8 +66,8 @@ const Form: React.FC = () => {
           <form onSubmit={handleSubmit(onSubmit)} className="form">
             <div className="flex flex-col gap-6 mb-6">
               <input
-                {...register("name")}
-                placeholder="Your Name"
+                {...register("speaker")}
+                placeholder="Speaker Name"
                 required
                 className="w-full p-2 border rounded-md placeholder:font-normal"
               />

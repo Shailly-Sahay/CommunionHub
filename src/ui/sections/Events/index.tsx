@@ -73,10 +73,10 @@ const Events = () => {
         <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center section-pd items-center z-50">
           <div className="w-full h-[70%] overflow-auto rounded-lg shadow-lg relative">
             <button
-              className="absolute top-2 right-2 text-white"
+              className="absolute top-8 right-8 text-white z-50"
               onClick={() => setIsModalOpen(false)}
             >
-              <X width={34} height={34} />
+              <X width={24} height={24} />
             </button>
             <Form />
           </div>
