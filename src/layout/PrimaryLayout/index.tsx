@@ -2,7 +2,7 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
 import { motion, useMotionTemplate } from "framer-motion";
-import { useColor } from "../../context/ColorContext";
+import { useApp } from "../../hooks/useApp";
 import { Navigation } from "../../ui";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 };
 
 const PrimaryLayout = ({ children }: Props) => {
-  const { color } = useColor(); // Get animated color
+  const { color } = useApp();
 
   // 🌌 Aurora Background using Framer Motion
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;

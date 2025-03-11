@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import Button from "../Button";
+import GlowingButton from "../GlowingButton";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,10 +15,10 @@ const Navigation = () => {
 
       {/* Show button only on desktop */}
       <div className="hidden md:flex">
-        <Button>Explore Events</Button>
+        <GlowingButton text="Explore Events" />
       </div>
 
-      {/* Right - Mobile Menu Button */}
+      {/* Right - Mobile Menu GlowingButton */}
       <button
         onClick={() => setMenuOpen(!menuOpen)}
         className="md:hidden focus:outline-none"
@@ -37,7 +37,7 @@ const Navigation = () => {
           </button>
 
           {/* Show button only in mobile menu */}
-          <Button>Explore Events</Button>
+          <GlowingButton text="Explore Events" />
         </div>
       )}
     </nav>

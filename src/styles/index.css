@@ -15,5 +15,5 @@ body {
 }
 
 .section-pd {
-  @apply px-32;
+  @apply px-16 lg:px-32;
 }

@@ -1,32 +1,63 @@
-import { ReactNode } from "react";
-import { motion, useMotionTemplate } from "framer-motion";
-import { useColor } from "../../../context/colorContext"; // Import the color context
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-interface GlowingButtonProps {
-  children: ReactNode;
+interface ButtonProps {
+  text: string;
+  variant?: "primary" | "secondary";
+  shape?: "square" | "round";
+  type?: "submit" | "reset" | "button";
+  href?: string;
   onClick?: () => void;
+  className?: string;
 }
 
-const Button: React.FC<GlowingButtonProps> = ({ children, onClick }) => {
-  const { color } = useColor(); // Get animated color from context
-
-  const border = useMotionTemplate`1px solid ${color}`;
-  const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
-
+const Button: React.FC<ButtonProps> = ({
+  text,
+  variant = "primary",
+  shape = "square",
+  // type = "button",
+  href,
+  onClick,
+  className,
+}) => {
+  const Component = StyledButton;
   return (
-    <motion.button
-      style={{
-        border,
-        boxShadow,
-      }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.985 }}
+    <Component
+      to={href}
+      as={href ? Link : "button"}
+      $variant={variant}
+      $shape={shape}
       onClick={onClick}
-      className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-6 py-4 text-gray-50 transition-colors"
+      className={className}
     >
-      {children}
-    </motion.button>
+      {text}
+    </Component>
   );
 };
+
+const StyledButton = styled.button<{ $variant: string; $shape: string }>`
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 24px;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  font-size: 1.6rem;
+  z-index: 654545;
+  border-radius: ${({ $shape }) => ($shape === "round" ? "50px" : "0")};
+  background: ${({ $variant }) =>
+    $variant === "primary" ? "transparent" : "white"};
+  color: ${({ $variant }) => ($variant === "primary" ? "white" : "#6919ff")};
+  &:hover {
+    background: ${({ $variant }) =>
+      $variant === "primary" ? "white" : "transparent"};
+    color: ${({ $variant }) => ($variant === "primary" ? "#6919ff" : "white")};
+    transform: scale(1.05);
+  }
+`;
+
+// Removed StyledLink as it's no longer needed
 
 export default Button;

@@ -1,5 +1,5 @@
 import { FaArrowRight } from "react-icons/fa";
-import Button from "../../components/Button";
+import { GlowingButton } from "../..";
 import Tag from "../../components/Tag";
 
 const Hero = () => {
@@ -16,10 +16,9 @@ const Hero = () => {
           inspire, unite, and uplift.
         </p>
 
-        <Button>
-          Start free trial
+        <GlowingButton text="     Start free trial">
           <FaArrowRight className="transition-transform group-hover:rotate-45 group-active:rotate-12" />
-        </Button>
+        </GlowingButton>
       </div>
     </section>
   );

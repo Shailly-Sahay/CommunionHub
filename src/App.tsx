@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { PrimaryLayout } from "./layout";
 import { HomePage, EventsPage } from "./Pages";
-import { ColorProvider } from "./context/colorContext";
+import { AppProvider } from "./context/AppContext";
 
 function App() {
   return (
-    <ColorProvider>
+    <AppProvider>
       <Router>
         <Routes>
           <Route
@@ -26,7 +26,7 @@ function App() {
           />
         </Routes>
       </Router>
-    </ColorProvider>
+    </AppProvider>
   );
 }
 

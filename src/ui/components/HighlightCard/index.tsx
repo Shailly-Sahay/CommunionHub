@@ -49,10 +49,9 @@ const HighlightedCard: React.FC<HighlightedCardProps> = ({ children }) => {
 const Card = styled.div`
   background-color: rgba(255, 255, 255, 0.02);
   border-radius: 10px;
-  cursor: pointer;
   position: relative;
   display: flex;
-
+  z-index: 0;
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
