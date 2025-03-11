@@ -18,7 +18,7 @@ const Hero = () => {
           inspire, unite, and uplift.
         </p>
 
-        <GlowingButton text="     Start free trial">
+        <GlowingButton text="Explore Events" href="/events">
           <FaArrowRight className="transition-transform group-hover:rotate-45 group-active:rotate-12" />
         </GlowingButton>
       </div>

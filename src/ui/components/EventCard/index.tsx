@@ -1,5 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { Calendar, Pin } from "lucide-react";
 import Tag from "../Tag";
+import Button from "../GlowingButton";
 
 interface EventCardProps {
   speaker: string;
@@ -7,6 +8,8 @@ interface EventCardProps {
   eventType: string;
   imageSrc: string;
   description: string;
+  date: string;
+  location: string;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -15,6 +18,8 @@ const EventCard: React.FC<EventCardProps> = ({
   eventType,
   imageSrc,
   description,
+  date,
+  location,
 }) => {
   return (
     <div className="w-full h-full bg-gray-900 text-white rounded-lg px-8 py-16 shadow-lg relative overflow-hidden">
@@ -36,19 +41,25 @@ const EventCard: React.FC<EventCardProps> = ({
         <p className="text-teal-200 font-semibold small-font">
           Speaker: {speaker}
         </p>
-
         {/* Title */}
-
+        {/* date: "2025-03-31", location: "Library Hall", */}
         <h2 className=" font-bold header mt-2 mb-4 leading-tight">{title}</h2>
 
-        {/* <p className="text-gray-300 font-medium mt-3">{eventType}</p> */}
         <p className="body-font font-normal mb-8">{description}</p>
-
         {/* Button */}
-        <button className="mt-6 flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-full hover:bg-gray-700 transition">
-          Register
-          <ArrowRight size={18} />
-        </button>
+        <div className="flex justify-between items-center">
+          <Button text="Register" glow={false} />
+          <div className="flex flex-col gap-4">
+            <span className="flex gap-4 small-font text-gray-500 font-normal ">
+              <Calendar width={16} height={16} />
+              {date}
+            </span>
+            <span className="flex gap-4 small-font text-gray-500 font-normal ">
+              <Pin width={16} height={16} />
+              {location}
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

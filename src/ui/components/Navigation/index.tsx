@@ -2,12 +2,14 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import GlowingButton from "../GlowingButton";
+import { useApp } from "../../../hooks/useApp";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isHomePage } = useApp();
 
   return (
-    <nav className="flex fixed top-0 left-0 w-full z-50 items-center section-pd justify-between py-12 bg-transparent text-white">
+    <nav className="flex fixed top-0 left-0 w-full z-40 items-center section-pd justify-between py-12 bg-transparent text-white">
       {/* Left - Logo */}
       <Link to="/">
         <h3 className="tracking-tight text-white header">CommunionHub</h3>
@@ -15,7 +17,11 @@ const Navigation = () => {
 
       {/* Show button only on desktop */}
       <div className="hidden md:flex">
-        <GlowingButton text="Explore Events" />
+        {isHomePage ? (
+          <GlowingButton text="Add Events" href="/events" />
+        ) : (
+          <GlowingButton text="Home Page" href="/" />
+        )}
       </div>
 
       {/* Right - Mobile Menu GlowingButton */}
@@ -37,7 +43,7 @@ const Navigation = () => {
           </button>
 
           {/* Show button only in mobile menu */}
-          <GlowingButton text="Explore Events" />
+          <GlowingButton text="Add Events" />
         </div>
       )}
     </nav>

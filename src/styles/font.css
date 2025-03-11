@@ -21,7 +21,7 @@ h1.header {
 }
 
 h2.header {
-  @apply text-4xl xl:text-5xl;
+  @apply text-5xl xl:text-6xl;
 }
 
 h3.header {
@@ -38,4 +38,8 @@ h3.header {
 
 .small-font {
   @apply text-lg lg:text-xl;
+}
+
+option {
+  @apply font-[Poppins];
 }

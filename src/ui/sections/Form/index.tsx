@@ -11,12 +11,19 @@ interface EventFormData {
   date: string;
   location: string;
   description: string;
-  image?: string; // Store Base64 image string
+  image?: string;
 }
 
 const Form: React.FC = () => {
   const { register, handleSubmit, reset } = useForm<EventFormData>();
   const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const categories = [
+    "Religious",
+    "Workshops",
+    "Wellness",
+    "Social",
+    "Charity",
+  ];
 
   // Convert Image to Base64
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,12 +40,10 @@ const Form: React.FC = () => {
   // Handle Form Submission
   const onSubmit = (data: EventFormData) => {
     const existingEvents = JSON.parse(localStorage.getItem("events") || "[]");
-
     const eventWithImage = {
       ...data,
-      image: imagePreview || "", // Store the Base64 image string
+      image: imagePreview || "",
     };
-
     localStorage.setItem(
       "events",
       JSON.stringify([...existingEvents, eventWithImage])
@@ -64,60 +69,78 @@ const Form: React.FC = () => {
                 {...register("name")}
                 placeholder="Your Name"
                 required
-                className="w-full p-2 border rounded-md"
+                className="w-full p-2 border rounded-md placeholder:font-normal"
               />
               <input
                 {...register("email")}
                 type="email"
                 placeholder="Your Email"
                 required
-                className="w-full p-2 border rounded-md"
+                className="w-full p-2 border rounded-md placeholder:font-normal"
               />
               <input
                 {...register("title")}
                 placeholder="Event Title"
                 required
-                className="w-full p-2 border rounded-md"
+                className="w-full p-2 border rounded-md placeholder:font-normal"
               />
-              <input
+
+              {/* Category Dropdown */}
+              <select
                 {...register("category")}
-                placeholder="Event Category"
                 required
-                className="w-full p-2 border rounded-md"
-              />
+                className="w-full p-2 border rounded-md font-normal text-white"
+              >
+                <option className="text-black" value="">
+                  Select Category
+                </option>
+                {categories.map((category) => (
+                  <option
+                    className="text-black font-[Poppins]"
+                    key={category}
+                    value={category}
+                  >
+                    {category}
+                  </option>
+                ))}
+              </select>
+
               <input
                 {...register("date")}
                 type="date"
                 required
-                className="w-full p-2 border rounded-md"
+                className="w-full p-2 border rounded-md placeholder:font-normal"
               />
               <input
                 {...register("location")}
                 placeholder="Event Location"
                 required
-                className="w-full p-2 border rounded-md"
+                className="w-full p-2 border rounded-md font-normal"
               />
               <textarea
                 {...register("description")}
                 placeholder="Event Description"
                 required
-                className="w-full p-2 border rounded-md resize-none"
+                className="w-full p-2 border rounded-md resize-none placeholder:font-normal"
               />
 
               {/* Image Upload */}
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageUpload}
-                className="w-full p-2 border rounded-md"
-              />
+              <div className="flex flex-col  gap-2">
+                <label className="font-normal">Image:</label>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  className="w-full p-2 border rounded-md placeholder:font-normal"
+                />
+              </div>
 
               {/* Image Preview */}
               {imagePreview && (
                 <img
                   src={imagePreview}
                   alt="Preview"
-                  className="w-full h-40 object-cover mt-4 rounded-md"
+                  className="w-full h-40 object-cover mt-4 rounded-md font-normal"
                 />
               )}
             </div>
