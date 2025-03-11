@@ -9,7 +9,7 @@ const Navigation = () => {
   const { isHomePage } = useApp();
 
   return (
-    <nav className="flex fixed top-0 left-0 w-full z-40 items-center section-pd justify-between py-12 bg-transparent text-white">
+    <nav className="flex fixed top-0 left-0 w-full z-40 items-center bg-black/50 section-pd justify-between py-8 md:py-12  text-white">
       {/* Left - Logo */}
       <Link to="/">
         <h3 className="tracking-tight text-white header">CommunionHub</h3>

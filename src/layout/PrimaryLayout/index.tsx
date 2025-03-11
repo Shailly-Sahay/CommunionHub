@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
 import { motion, useMotionTemplate } from "framer-motion";
 import { useApp } from "../../hooks/useApp";
-import { Navigation } from "../../ui";
+import { Footer, Navigation } from "../../ui";
 
 type Props = {
   children: React.ReactNode;
@@ -34,6 +34,7 @@ const PrimaryLayout = ({ children }: Props) => {
 
       {/* Page Content Wrapper (Scrollable) */}
       <div className="relative z-10 h-screen overflow-y-auto">{children}</div>
+      <Footer />
     </motion.div>
   );
 };

@@ -1,6 +1,7 @@
 export { default as Hero } from "./sections/Hero";
 export { default as Form } from "./sections/Form";
 export { default as Events } from "./sections/Events";
+export { default as Footer } from "./sections/Footer";
 
 export { default as Tag } from "./components/Tag";
 export { default as GlowingButton } from "./components/GlowingButton";
