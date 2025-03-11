@@ -50,11 +50,11 @@ const EventCard: React.FC<EventCardProps> = ({
         <div className="flex justify-between items-center">
           <Button text="Register" glow={false} />
           <div className="flex flex-col gap-4">
-            <span className="flex gap-4 small-font text-gray-500 font-normal ">
+            <span className="flex gap-4 small-font text-gray-400 font-normal ">
               <Calendar width={16} height={16} />
               {date}
             </span>
-            <span className="flex gap-4 small-font text-gray-500 font-normal ">
+            <span className="flex gap-4 small-font text-gray-400 font-normal ">
               <Pin width={16} height={16} />
               {location}
             </span>

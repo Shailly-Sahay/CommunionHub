@@ -71,7 +71,7 @@ const Events = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center section-pd items-center z-50">
-          <div className="w-full rounded-lg shadow-lg relative">
+          <div className="w-full h-[70%] overflow-auto rounded-lg shadow-lg relative">
             <button
               className="absolute top-2 right-2 text-white"
               onClick={() => setIsModalOpen(false)}

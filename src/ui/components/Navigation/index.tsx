@@ -43,7 +43,11 @@ const Navigation = () => {
           </button>
 
           {/* Show button only in mobile menu */}
-          <GlowingButton text="Add Events" />
+          {isHomePage ? (
+            <GlowingButton text="Add Events" href="/events" />
+          ) : (
+            <GlowingButton text="Home Page" href="/" />
+          )}
         </div>
       )}
     </nav>
