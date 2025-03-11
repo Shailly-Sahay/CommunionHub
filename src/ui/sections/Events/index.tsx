@@ -21,7 +21,7 @@ const Events = () => {
   return (
     <div className="section-pd min-h-screen px-6 py-12 text-white mt-36">
       <div className="flex justify-between items-center mb-12">
-        <h2 className="text-left">Upcoming Events</h2>
+        <h2 className="text-left header">Upcoming Events</h2>
         {/* Filter Dropdown */}
         <select
           className="bg-gray-800 text-white px-4 py-2 rounded-md"

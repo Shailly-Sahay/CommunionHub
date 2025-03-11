@@ -16,15 +16,15 @@ h6 {
   @apply font-[Syne];
 }
 
-h1 {
+h1.header {
   @apply text-6xl sm:text-7xl md:text-8xl xl:text-9xl  bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center font-medium leading-tight text-transparent;
 }
 
-h2 {
+h2.header {
   @apply text-4xl xl:text-5xl;
 }
 
-h3 {
+h3.header {
   @apply text-2xl lg:text-3xl;
 }
 

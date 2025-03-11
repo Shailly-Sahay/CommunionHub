@@ -10,7 +10,7 @@ const Navigation = () => {
     <nav className="flex fixed top-0 left-0 w-full z-50 items-center section-pd justify-between py-12 bg-transparent text-white">
       {/* Left - Logo */}
       <Link to="/">
-        <h3 className="tracking-tight text-white">CommunionHub</h3>
+        <h3 className="tracking-tight text-white header">CommunionHub</h3>
       </Link>
 
       {/* Show button only on desktop */}

@@ -8,7 +8,9 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center w-full md:w-[60%]">
         <Tag text="Get together" />
 
-        <h1 className="mb-4">Connecting People Across Faiths & Interests</h1>
+        <h1 className="mb-4 header">
+          Connecting People Across Faiths & Interests
+        </h1>
 
         <p className="large-font text-center text-gray-400 max-w-7xl leading-13 mb-16">
           Find your community, share your beliefs, and create moments that

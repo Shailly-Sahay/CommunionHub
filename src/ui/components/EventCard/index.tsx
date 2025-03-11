@@ -39,7 +39,7 @@ const EventCard: React.FC<EventCardProps> = ({
 
         {/* Title */}
 
-        <h2 className=" font-bold mt-2 mb-4 leading-tight">{title}</h2>
+        <h2 className=" font-bold header mt-2 mb-4 leading-tight">{title}</h2>
 
         {/* <p className="text-gray-300 font-medium mt-3">{eventType}</p> */}
         <p className="body-font font-normal mb-8">{description}</p>
