@@ -52,7 +52,7 @@ const Card = styled.div`
   cursor: pointer;
   position: relative;
   display: flex;
-  width: 100%;
+
   color: white;
   font-size: 1.2rem;
   font-weight: bold;

@@ -20,6 +20,10 @@ h1 {
   @apply text-6xl sm:text-7xl md:text-8xl xl:text-9xl  bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center font-medium leading-tight text-transparent;
 }
 
+h2 {
+  @apply text-4xl xl:text-5xl;
+}
+
 h3 {
   @apply text-2xl lg:text-3xl;
 }

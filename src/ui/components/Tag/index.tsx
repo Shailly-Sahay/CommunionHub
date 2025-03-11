@@ -12,7 +12,7 @@ const Tag = ({ text, customClass = "" }: TagProps) => {
       className={`mb-[4rem] relative flex ${customClass || "justify-center"}`}
     >
       <StyledTagContainer>
-        <p className="text-[var(--color-primary)] small-font">{text}</p>
+        <p className="text-white small-font">{text}</p>
       </StyledTagContainer>
     </div>
   );
@@ -20,10 +20,10 @@ const Tag = ({ text, customClass = "" }: TagProps) => {
 
 const StyledTagContainer = styled.div`
   position: relative;
-  padding: 8px 16px;
+  padding: 4px 12px;
   border-radius: 9999px;
-  border: 1px solid var(--color-primary);
-  background-color: rgba(105, 25, 255, 0.14);
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.14);
   overflow: hidden;
 
   /* ✅ Motion Background using ::before */
@@ -31,12 +31,7 @@ const StyledTagContainer = styled.div`
     content: "";
     height: 100%;
     width: 40%;
-    background-color: rgba(
-      90,
-      15,
-      200,
-      0.6
-    ); /* Using a dark shade of primary */
+    background-color: rgba(255, 255, 255, 0.6);
     position: absolute;
     top: 0;
     left: -70%;

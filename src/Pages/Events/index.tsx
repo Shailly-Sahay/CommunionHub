@@ -1,14 +1,7 @@
-import React from "react";
-import { Form } from "../../ui";
+import { Events } from "../../ui";
 
-type Props = {};
-
-const EventsPage = (props: Props) => {
-  return (
-    <div>
-      <p>dfsdfkj</p>
-    </div>
-  );
+const EventsPage = () => {
+  return <Events />;
 };
 
 export default EventsPage;
