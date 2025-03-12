@@ -20,57 +20,7 @@ export const events = [
     description:
       "Meet founders, investors, and tech enthusiasts for networking.",
   },
-  {
-    id: 3,
-    speaker: "Swami Rajananda",
-    title: "Hindu Bhajan & Satsang",
-    category: "Religious",
-    img: "/img/religious1.jpg",
-    date: "2025-04-10",
-    location: "Temple Hall",
-    description: "Experience devotion through soulful bhajans and discussions.",
-  },
-  {
-    id: 4,
-    speaker: "Sophia Lee",
-    title: "Photography & Editing Bootcamp",
-    category: "Workshops",
-    img: "/img/workshop1.jpg",
-    date: "2025-04-16",
-    location: "Art Studio",
-    description: "Hands-on training in photography and post-processing skills.",
-  },
-  {
-    id: 5,
-    speaker: "Imam Yusuf Ahmed",
-    title: "Ramadan Iftar Gathering",
-    category: "Religious",
-    img: "/img/religious2.jpg",
-    date: "2025-04-02",
-    location: "Islamic Center",
-    description: "Join us for an open community iftar during Ramadan.",
-  },
-  {
-    id: 6,
-    speaker: "Nancy Green",
-    title: "Local Farmers Market Meetup",
-    category: "Social",
-    img: "/img/social2.jpg",
-    date: "2025-04-05",
-    location: "Central Park",
-    description: "Explore fresh produce, local crafts, and sustainable food.",
-  },
-  {
-    id: 7,
-    speaker: "Dr. Mark Roberts",
-    title: "Blood Donation Camp",
-    category: "Charity",
-    img: "/img/charity5.jpg",
-    date: "2025-04-03",
-    location: "City Hospital",
-    description:
-      "Save lives by donating blood and supporting health initiatives.",
-  },
+
   {
     id: 8,
     speaker: "Maya Patel",
@@ -82,16 +32,6 @@ export const events = [
     description: "Overcome fear and become a powerful public speaker.",
   },
   {
-    id: 9,
-    speaker: "Rev. Thomas Miller",
-    title: "Sunday Gospel & Worship",
-    category: "Religious",
-    img: "/img/religious3.jpg",
-    date: "2025-03-27",
-    location: "St. Michael's Church",
-    description: "Weekly gospel reading and community prayer session.",
-  },
-  {
     id: 10,
     speaker: "Linda Carter",
     title: "Clothing & Book Donation",
@@ -101,16 +41,7 @@ export const events = [
     location: "Public Library",
     description: "Give back by donating books and clothes to those in need.",
   },
-  {
-    id: 11,
-    speaker: "Zane Malik",
-    title: "Nature Hike & Mindfulness Walk",
-    category: "Wellness",
-    img: "/img/wellness2.jpg",
-    date: "2025-04-04",
-    location: "Greenwood Trail",
-    description: "Reconnect with nature through a guided mindfulness hike.",
-  },
+
   {
     id: 12,
     speaker: "Olivia Parker",
@@ -152,16 +83,7 @@ export const events = [
     location: "Health Club",
     description: "Learn about balanced diets and healthy food habits.",
   },
-  {
-    id: 16,
-    speaker: "Rajiv Mehta",
-    title: "Fundraiser for Children's Education",
-    category: "Charity",
-    img: "/img/charity2.jpg",
-    date: "2025-04-20",
-    location: "Town Hall",
-    description: "Help provide scholarships and learning resources for kids.",
-  },
+
   {
     id: 17,
     speaker: "Chris Nolan",
@@ -172,16 +94,7 @@ export const events = [
     location: "Community Center",
     description: "Unwind with strategy and fun board games with new friends.",
   },
-  {
-    id: 18,
-    speaker: "Jessica Reed",
-    title: "Sound Healing & Relaxation Therapy",
-    category: "Wellness",
-    img: "/img/wellness4.jpg",
-    date: "2025-04-17",
-    location: "Zen Studio",
-    description: "Experience relaxation through the power of sound vibrations.",
-  },
+
   {
     id: 19,
     speaker: "David Thompson",
@@ -203,16 +116,6 @@ export const events = [
     location: "Innovation Hub",
     description: "Master SEO, social media, and online advertising strategies.",
   },
-  {
-    id: 21,
-    speaker: "Aaron Mitchell",
-    title: "Financial Literacy & Investment Basics",
-    category: "Workshops",
-    img: "/img/workshop5.jpg",
-    date: "2025-04-09",
-    location: "Bank Auditorium",
-    description: "Learn how to manage money and invest wisely for the future.",
-  },
 
   {
     id: 23,
@@ -223,16 +126,5 @@ export const events = [
     date: "2025-03-30",
     location: "The Music Lounge",
     description: "A night of poetry, music, and storytelling by local artists.",
-  },
-
-  {
-    id: 25,
-    speaker: "Michael Scott",
-    title: "Food Drive for the Homeless",
-    category: "Charity",
-    img: "/img/charity1.jpg",
-    date: "2025-03-28",
-    location: "Downtown Shelter",
-    description: "Volunteer to distribute meals and essential supplies.",
   },
 ];

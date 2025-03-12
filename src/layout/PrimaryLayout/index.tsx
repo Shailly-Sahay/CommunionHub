@@ -35,7 +35,7 @@ const PrimaryLayout = ({ children }: Props) => {
         {/* Page Content Wrapper (Scrollable) */}
       </motion.div>
       <Navigation />
-      <div className="relative z-10 h-screen overflow-y-auto">{children}</div>
+      <div className="relative z-10 overflow-y-auto">{children}</div>
       <Footer />
     </>
   );
