@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# CommunionHub - Event Management Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**CommunionHub** is a modern event management web app that connects people across faiths and interests. Users can explore, filter, and add events seamlessly.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 **Tech Stack**
+### **Core Technologies**
+- ⚛ **React + TypeScript** - Component-based frontend framework with strong typing.
+- 🎨 **Tailwind CSS** - Utility-first styling for responsive and modern UI.
+- 💅 **Styled Components** - Component-level CSS-in-JS for custom styling.
 
-## Expanding the ESLint configuration
+### **Animations & UI Effects**
+- 🌀 **Framer Motion** - Smooth animations and transitions.
+- 🌌 **React Three Fiber** - 3D rendering in React.
+- ✨ **@react-three/drei** - Utility components for Three.js.
+- 💡 **Lucide React** - Icon library for modern UI elements.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### **Forms & Data Management**
+- 📋 **React Hook Form** - Lightweight form handling and validation.
+- 💾 **LocalStorage API** - Persistent event storage on the frontend.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Features
+- 🌐 **Home Page** - Introduction to CommunionHub.
+- 🎟 **Event Listing** - View all upcoming events.
+- 🔍 **Event Filtering** - Filter events by category.
+- ➕ **Add Events** - Users can submit their own events (stored in `localStorage`).
+- 🎨 **Dark Mode & Aurora UI** - Stunning animated background and dark UI.
+- 📱 **Fully Responsive** - Works on all devices.
+- ✨ **Interactive Hover Effects** - Highlighted cards with animated glow.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🛠️ **Installation & Setup**
+### 1️⃣ **Clone the Repository**
+```sh
+git clone https://github.com/your-username/communionhub.git
+cd communionhub
+
+npm run dev
+# or
+yarn dev
