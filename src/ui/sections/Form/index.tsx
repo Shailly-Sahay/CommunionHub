@@ -5,7 +5,6 @@ import HighlightCard from "../../components/HighlightCard";
 
 interface EventFormData {
   speaker: string;
-  email: string;
   title: string;
   category: string;
   date: string;
@@ -69,13 +68,7 @@ const Form: React.FC<FormProps> = ({ onSubmit, onClose }) => {
                 required
                 className="w-full p-2 border rounded-md placeholder:font-normal"
               />
-              <input
-                {...register("email")}
-                type="email"
-                placeholder="Your Email"
-                required
-                className="w-full p-2 border rounded-md placeholder:font-normal"
-              />
+
               <input
                 {...register("title")}
                 placeholder="Event Title"
