@@ -26,8 +26,15 @@ const Events = () => {
       ? events
       : events.filter((event) => event.category === selectedCategory);
 
+  // ✅ Handle New Event Submission
+  const handleAddEvent = (newEvent: any) => {
+    const updatedEvents = [...events, newEvent];
+    setEvents(updatedEvents);
+    localStorage.setItem("events", JSON.stringify(updatedEvents));
+  };
+
   return (
-    <section className="section-pd py-28 min-h-screen px-6 py-12 text-white mt-36">
+    <section className="section-pd min-h-screen px-6 py-12 lg:py-28 text-white mt-36">
       <div className="flex justify-between items-center mb-12">
         <div className="flex flex-col gap-8">
           <h2 className="text-left header">Upcoming Events</h2>
@@ -68,7 +75,7 @@ const Events = () => {
         ))}
       </div>
 
-      {/* Modal */}
+      {/* ✅ Modal with Form */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center section-pd items-center z-50">
           <div className="w-full h-[80%] overflow-auto rounded-lg shadow-lg relative">
@@ -78,7 +85,11 @@ const Events = () => {
             >
               <X width={24} height={24} />
             </button>
-            <Form />
+            {/* ✅ Pass Submission Handler & Close Function */}
+            <Form
+              onSubmit={handleAddEvent}
+              onClose={() => setIsModalOpen(false)}
+            />
           </div>
         </div>
       )}

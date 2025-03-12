@@ -11,12 +11,18 @@ interface EventFormData {
   date: string;
   location: string;
   description: string;
-  image?: string;
+  img?: string;
 }
 
-const Form: React.FC = () => {
+interface FormProps {
+  onSubmit: (data: EventFormData) => void; // Function to handle submission
+  onClose: () => void; // Function to close the modal
+}
+
+const Form: React.FC<FormProps> = ({ onSubmit, onClose }) => {
   const { register, handleSubmit, reset } = useForm<EventFormData>();
   const [imagePreview, setImagePreview] = useState<string | null>(null);
+
   const categories = [
     "Religious",
     "Workshops",
@@ -38,19 +44,11 @@ const Form: React.FC = () => {
   };
 
   // Handle Form Submission
-  const onSubmit = (data: EventFormData) => {
-    const existingEvents = JSON.parse(localStorage.getItem("events") || "[]");
-    const eventWithImage = {
-      ...data,
-      img: imagePreview || "",
-    };
-    localStorage.setItem(
-      "events",
-      JSON.stringify([...existingEvents, eventWithImage])
-    );
+  const handleFormSubmit = (data: EventFormData) => {
+    onSubmit({ ...data, img: imagePreview || "" }); // Send data up
     reset();
     setImagePreview(null);
-    alert("Event added successfully!");
+    onClose(); // Close modal
   };
 
   return (
@@ -63,7 +61,7 @@ const Form: React.FC = () => {
           </p>
         </div>
         <div className="w-full md:w-1/2 z-50">
-          <form onSubmit={handleSubmit(onSubmit)} className="form">
+          <form onSubmit={handleSubmit(handleFormSubmit)} className="form">
             <div className="flex flex-col gap-6 mb-6">
               <input
                 {...register("speaker")}
@@ -125,7 +123,7 @@ const Form: React.FC = () => {
               />
 
               {/* Image Upload */}
-              <div className="flex flex-col  gap-2">
+              <div className="flex flex-col gap-2">
                 <label className="font-normal">Image:</label>
                 <input
                   type="file"
