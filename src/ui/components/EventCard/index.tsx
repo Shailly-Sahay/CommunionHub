@@ -32,8 +32,7 @@ const EventCard: React.FC<EventCardProps> = ({
         }}
       ></div>
       <Tag text={eventType} customClass="justify-start" />
-
-      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
 
       {/* Content */}
       <div className="relative z-10">
@@ -43,7 +42,7 @@ const EventCard: React.FC<EventCardProps> = ({
         </p>
         {/* Title */}
         {/* date: "2025-03-31", location: "Library Hall", */}
-        <h2 className=" font-bold header mt-2 mb-4 leading-tight">{title}</h2>
+        <h3 className=" font-bold header mt-2 mb-4 leading-tight">{title}</h3>
 
         <p className="body-font font-normal mb-8">{description}</p>
         {/* Button */}

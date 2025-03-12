@@ -34,7 +34,7 @@ const Events = () => {
   };
 
   return (
-    <section className="section-pd min-h-screen px-6 py-12 lg:py-28 text-white mt-36">
+    <section className="section-pd min-h-screen py-12 lg:py-28 text-white mt-36">
       <div className="flex justify-between items-center mb-12">
         <div className="flex flex-col gap-8">
           <h2 className="text-left header">Upcoming Events</h2>
@@ -75,21 +75,22 @@ const Events = () => {
         ))}
       </div>
 
-      {/* ✅ Modal with Form */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center section-pd items-center z-50">
-          <div className="w-full h-[80%] overflow-auto rounded-lg shadow-lg relative">
-            <button
-              className="absolute top-8 right-8 text-white z-50"
-              onClick={() => setIsModalOpen(false)}
-            >
-              <X width={24} height={24} />
-            </button>
-            {/* ✅ Pass Submission Handler & Close Function */}
-            <Form
-              onSubmit={handleAddEvent}
-              onClose={() => setIsModalOpen(false)}
-            />
+          <div className="w-full h-[80%]  overflow-auto rounded-lg shadow-lg relative flex items-center">
+            <div className="w-full relative">
+              {" "}
+              <button
+                className="absolute top-8 right-8 text-white z-50"
+                onClick={() => setIsModalOpen(false)}
+              >
+                <X width={24} height={24} />
+              </button>
+              <Form
+                onSubmit={handleAddEvent}
+                onClose={() => setIsModalOpen(false)}
+              />
+            </div>
           </div>
         </div>
       )}
